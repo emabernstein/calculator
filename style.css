@@ -1,0 +1,139 @@
+/* https://misc.colehollant.com/css-info/ */
+:root {
+  --opacity: 0.8;
+  --container-bg: rgba(47, 48, 49, var(--opacity));
+  --container-border-color: rgba(108, 108, 112, var(--opacity));
+  --text-color: rgb(231, 232, 233);
+  --button-border-color: rgba(44, 44, 50, var(--opacity));
+  --button-bg: rgba(98, 103, 113, var(--opacity));
+  --first-row-bg: rgba(64, 66, 74, var(--opacity));
+  --operation-bg: rgb(245, 145, 23);
+  --button-active: rgba(143, 143, 143, var(--opacity));
+  --operation-active: rgb(206, 121, 18);
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: tan;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.container {
+  backdrop-filter: blur(3px);
+  position: relative;
+  z-index: 1;
+  width: calc(0.5 * 470px);
+  height: calc(0.5 * 650px);
+  /* flex box! */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--container-border-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  border-top: 1px solid var(--button-border-color);
+  border-right: 1px solid var(--button-border-color);
+  background-color: var(--button-bg);
+  width: 25%;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.row--answer{
+  background-color: var(--container-bg);
+  height: 25%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#answer{
+  color: var(--text-color);
+  font-weight: 200;
+  font-size: 2.7rem;
+  margin: 0.25rem 1rem;
+}
+
+.row{
+  display: flex;
+  /* flex-grow: 1; */
+  flex: 1 1 0%;
+}
+
+.row--dark button {
+  background-color: var(--first-row-bg);
+}
+
+.row--end {
+  border-right: none;
+  background-color: var(--operation-bg) !important;
+}
+
+button:focus {
+  outline: none;
+  background-color: var(--button-active);
+}
+
+button:active {
+  background-color: var(--button-active);  
+}
+
+.row--dark button:active {
+  background-color: var(--button-active);
+}
+
+.row--end:active {
+  background-color: var(--operation-active) !important;
+}
+
+/*
+html {
+  font-size: 16px;  
+}
+16px = 1rem 
+rem, px, %
+rem, em, px, %, vw, vh
+.container
+  .row--answer
+    #answer
+  .row--dark
+    button
+    button
+    button
+    .row--end
+  .row
+    button
+    button
+    button
+    .row--end
+  .row
+    button
+    button
+    button
+    .row--end
+  .row
+    button
+    button
+    button
+    .row--end
+  .row
+    .w-half
+    button
+    .row--end 
+*/

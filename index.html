@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+
+    <h1>Calculatrice</h1>
+
+    <!-- 
+
+      ANSWER
+      -------
+      9 8 7 +
+      6 5 4 -
+      3 2 1 *
+      0 . = /
+      
+     -->
+
+     <!-- <div style="display: flex; width: 300px; height: 200px">
+       <div style="width: 10%; background: red; height: 50%;"></div>
+       <div style="width: 20%; background: blue; height: 30%;"></div>
+       <div style="width: 70%; background: green; height: 100%;"></div>
+     </div> -->
+
+    <!-- 
+    BEM (block__element--modifier)
+    -->
+    <img src="https://i.redd.it/lsz1ufobg8j41.jpg" alt="" class="bg">
+     <div class="container">
+        <div class="row--answer">
+          <div id="answer">0</div>
+        </div>
+        <div class="row row--dark">
+          <button onclick="addOp('clear')" id="calcdivide">c</button>
+          <button onclick="addOp('delete')" id="calcdivide">x</button>
+          <button onclick="addOp('sign')" id="calcsign">&plusmn;</button>
+          <button class="row--end" onclick="addOp('/')" id="calcdivide">&divide;</button>
+        </div>
+        <div class="row">
+          <button onclick="addOp('7')" id="calc7">7</button>
+          <button onclick="addOp('8')" id="calc8">8</button>
+          <button onclick="addOp('9')" id="calc9">9</button>
+          <button class="row--end" onclick="addOp('*')" id="calctimes">&times;</button>
+        </div>
+        <div class="row">
+          <button onclick="addOp('4')"id="calc4">4</button>
+          <button onclick="addOp('5')"id="calc5">5</button>
+          <button onclick="addOp('6')"id="calc6">6</button>
+          <button class="row--end" onclick="addOp('-')"id="calcminus">-</button>
+        </div>
+        <div class="row">
+          <button onclick="addOp('1')" id="calc1">1</button>
+          <button onclick="addOp('2')" id="calc2">2</button>
+          <button onclick="addOp('3')" id="calc3">3</button>
+          <button class="row--end" onclick="addOp('+')"id="calcplus">+</button>
+        </div>
+        <div class="row">
+          <button class="w-half" onclick="addOp('0')" id="calc0">0</button>
+          <button onclick="addOp('.')" id="calcdec">.</button>
+          <button class="row--end" onclick="addOp('=')" id="calcenter">=</button>
+        </div>
+     </div>
+  </body>
+</html>
